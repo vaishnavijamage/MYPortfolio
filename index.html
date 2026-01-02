@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+    body {background:#0d0d0d; color:#fff; overflow-x:hidden;}
+
+    /* HEADER */
+    header {width:100%; padding:20px 60px; display:flex; justify-content:space-between; align-items:center; position:fixed; top:0; z-index:1000; background:rgba(0,0,0,0.4); backdrop-filter:blur(10px);}    
+    header h2 {font-size:24px; font-weight:600; letter-spacing:1px;}
+    header nav a {margin-left:25px; text-decoration:none; color:#fff; font-size:15px; transition:0.3s;}
+    header nav a:hover {color:#00eaff;}
+
+    /* HERO */
+    .hero {width:100%; height:100vh; display:flex; align-items:center; padding:0 60px;}
+    .hero-text {max-width:50%; animation:fadeIn 1.5s ease forwards; opacity:0;}
+    @keyframes fadeIn {to {opacity:1; transform:translateY(0);} from {transform:translateY(20px);}}
+    .hero-text h1 {font-size:58px; line-height:70px;} 
+    .hero-text span {color:#00eaff;}
+    .hero-text p {margin:20px 0; font-size:18px; opacity:0.9;}
+    .hero-text button {padding:12px 30px; font-size:16px; border:none; border-radius:30px; cursor:pointer; background:#00eaff; color:#0d0d0d; transition:0.3s;}
+    .hero-text button:hover {background:#fff;}
+
+    .hero-img img {width:420px; border-radius:50%; box-shadow:0 0 30px #00eaff; animation:float 4s ease-in-out infinite;} 
+    @keyframes float {0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);}}
+
+    /* ACHIEVEMENTS */
+    .achievements {padding:80px 60px; text-align:center;} 
+    .achievements h2 {font-size:36px; margin-bottom:40px;}
+    .ach-boxes {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:25px;} 
+    .ach-box {background:#111; padding:25px; border-radius:15px; box-shadow:0 0 10px rgba(0,0,0,0.6); transition:0.3s;}
+    .ach-box:hover {transform:translateY(-10px); box-shadow:0 0 15px #00eaff;} 
+    .ach-box i {font-size:40px; color:#00eaff; margin-bottom:15px;}
+    .ach-box h3 {font-size:20px; margin-bottom:10px;}
+
+    /* PROJECTS */
+    .projects {padding:80px 60px; text-align:center;}
+    .projects h2 {font-size:36px; margin-bottom:40px;}
+    .project-grid {display:grid; grid-template-columns:repeat(2,1fr); gap:25px;} 
+    .project-card {background:#111; border-radius:15px; overflow:hidden; transition:0.3s; box-shadow:0 0 10px rgba(0,0,0,0.6);} 
+    .project-card:hover {transform:scale(1.03); box-shadow:0 0 15px #00eaff;} 
+    .project-card img {width:100%;}
+    .project-card h4 {padding:15px; font-size:20px;}
+
+    /* FOOTER */
+    footer {padding:30px; text-align:center; background:#111; margin-top:40px;}
+    footer p {opacity:0.8;}
+
+    @media(max-width:768px){
+      .hero {flex-direction:column; text-align:center; padding-top:120px;}
+      .hero-text {max-width:100%;}
+      .hero-img img {margin-top:30px; width:260px;}
+      .project-grid {grid-template-columns: 1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>My Portfolio</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Hello, I'm <span>Vaishnavi</span></h1>
+    <p>A creative student passionate about technology, design, and innovation. Motivated and detail-oriented web Designer beginner with a solid understanding designing, UI experience and basic java/Python and Database Concepts .</p>
+    <p>Technology knows : Canva, Figma, Photopea, Github, MySql, Wammp Server</p>
+    
+    <a href="resume_vaishnavijamge.pdf" target="_blank"><button>Download Resume</button></a>
+  </div>
+  <div class="hero-img">
+    <img src="image copy 2.png" alt="Profile" style="width:250px;" />
+  </div>
+</section>
+
+<section class="achievements" id="achievements">
+  <h2>Highlighted Achievements</h2>
+  <div class="ach-boxes">
+    <div class="ach-box">
+      <i class="fa-solid fa-trophy"></i>
+      <h3>3rd Rank - BCA</h3>
+      <p>Secured 3rd Rank in my Graduation.</p>
+    </div>
+    <div class="ach-box">
+      <i class="fa-solid fa-rocket"></i>
+      <h3>ISRO Internship</h3>
+      <p>Worked on real-world projects involving design, development,and documentation.</p>
+    </div>
+    <div class="ach-box">
+      <i class="fa-solid fa-certificate"></i>
+      <h3>Certified Courses</h3>
+      <p>Completed certified course in soft skill.</p>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <h2>My Projects</h2>
+  <div class="project-grid">
+   
+    <div class="project-card">
+      <img src="image copy 4.png" style="width:100%; height:280px; object-fit:cover; display:block;"/>
+      <h4>Exhibition Posters Designs</h4>
+      <a href="https://www.figma.com/design/Hlvcu38zWvv6Y9dWjeQyS2/Untitled?node-id=209-60&t=wqdmjQlmdrK20z12-1 Exhibition posters">Designed Link</a>
+    </div>
+    <div class="project-card">
+      <img src="image copy 5.png" style="width:100%; height:280px; object-fit:cover; display:block;" />
+      <h4>Website Landing Page</h4>
+      <a href=" https://www.figma.com/design/Hlvcu38zWvv6Y9dWjeQyS2/Untitled?node-id=259-3&t=1FmRyYk0JERQhSRI-1   website landing page">Designed Link</a>
+    </div>
+    <div class="project-card">
+      <img src="image.png" />
+      <h4>Face Recognition System</h4>
+      <a href="https://github.com/vaishnavijamage/FaceRecognition">Github Project Link</a>
+    </div>
+    <div class="project-card">
+      <img src="image copy 3.png" />
+      <h4>indo_science Website</h4>
+      <a href=" https://vaishnavijamage.github.io/indo_science">Github Project Link</a>
+    </div>
+    <div class="project-card">
+      <img src="image copy 7.png" />
+      <h4>Instagarm Post</h4>
+    </div>
+    <div class="project-card">
+      <img src="image copy 6.png" />
+      <h4>Instagarm Post</h4>
+    </div>
+    <div class="project-card">
+      <img src="Screenshot 2026-01-02 202123.png" />
+      <h4>Instagarm Post</h4>
+    </div>
+    <div class="project-card">
+      <img src="Screenshot 2026-01-02 193402.png" />
+      <h4>Instagarm Post</h4>
+    </div>
+    
+    
+  </div>
+</section>
+
+<footer id="contact">
+  <p>© 2025 Vaishnavi — All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
